@@ -1,0 +1,27 @@
+# Ignorar arquivos de build  
+/bin/  
+/obj/  
+*.o  
+*.exe  
+*.out  
+
+# Ignorar arquivos de sistema  
+.DS_Store  
+Thumbs.db  
+
+# Ignorar diretórios temporários  
+*.temp  
+*.log  
+
+# Ignorar artefatos de compilação  
+*.class  
+*.dll  
+*.so  
+
+# Ignorar outros tipos de arquivos  
+*.tmp  
+*.bak  
+
+# Incluir apenas arquivos .cpp e .h  
+!*.cpp  
+!*.h  
