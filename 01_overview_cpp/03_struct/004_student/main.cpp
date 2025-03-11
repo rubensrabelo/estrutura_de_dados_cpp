@@ -22,6 +22,22 @@ struct Student {
     }
 };
 
+Student bestStudent(vector<Student> students) {
+    Student best = students[0];
+    for(auto student : students) {
+        if(student.average() > best.average()) {
+            best = student;
+        }
+    }
+    return best;
+}
+
+void showStudent(Student student) {
+    cout << "Name: " << student.name << endl;
+    cout << fixed << setprecision(2);
+    cout << "Average: " << student.average() << endl;
+}
+
 int main() {
     int qtd;
     vector<Student> students;
@@ -44,6 +60,13 @@ int main() {
 
         students.push_back(Student(number, name, grades));
     }
+
+    cout << endl;
+    cout << "The best student is:" << endl;
+
+    Student best = bestStudent(students);
+
+    showStudent(best);
 
     return 0;
 }
