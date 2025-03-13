@@ -9,7 +9,10 @@ int main() {
     std::cout << "Enter array size: ";
     std::cin >> n;
 
-    int *arr = new int[n];
+    int *arr = new (std::nothrow) int[n];
+
+    if(!arr)
+        std::cout << "Memory overflow" << std::endl;
 
     fillArray(arr, n);
     showArray(arr, n);
