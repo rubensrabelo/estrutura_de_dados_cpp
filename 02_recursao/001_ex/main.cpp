@@ -1,3 +1,5 @@
+// Exercicio a soma dos 100 primeiros inteiros de forma recursiva
+
 #include<iostream>
 
 int sum_integer(int num);
