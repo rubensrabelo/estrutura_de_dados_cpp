@@ -9,16 +9,11 @@ class Box {
         double height {1.0};
 
     public:
-        Box() = default;
+        Box();
         Box(double lv, double wv, double hv);
+        ~Box();
+
         double volume() const;
 };
-
-Box::Box(double lv, double wv, double hv): length {lv}, width {wv}, height {hv} {
-}
-
-double Box::volume() const {
-    return length * width * height;
-}
 
 #endif
