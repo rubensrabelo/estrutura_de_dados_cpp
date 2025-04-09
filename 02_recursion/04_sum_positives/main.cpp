@@ -21,6 +21,8 @@ int main() {
 
     cout << "Sum = " << result << endl;
 
+    delete[] arr;
+
     return 0;
 }
 
