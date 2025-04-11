@@ -39,7 +39,7 @@ void addValueInArray(int *arr, int n) {
 }
 
 int largestValue(int* arr, int n) {
-    if(n == 0) return arr[n];
-    int value = arr[n] < largestValue(arr, n-1) ? largestValue(arr, n-1) : arr[n];
-    return value;
+    if(n == 1) return arr[0];
+    int value = largestValue(arr, n-1);
+    return arr[n-1] > value ? arr[n-1] : value;
 }
