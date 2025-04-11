@@ -34,7 +34,7 @@ int main() {
 
 void addArray(int* arr, int n) {
     for(int i = 0; i < n; i++) {
-        arr[i] = i;
+        cin >> arr[i];
     }
 }
 
@@ -47,13 +47,13 @@ void printArray(int* const arr, int n) {
 }
 
 int maxValueInArray(int* arr, int n) {
-    if(n == 0 ) return arr[n];
-    int max = arr[n] < maxValueInArray(arr, n-1) ? maxValueInArray(arr, n-1) : arr[n];
-    return max;
+    if(n == 1) return arr[0];
+    int max_rest = maxValueInArray(arr, n-1);
+    return arr[n-1] > max_rest ? arr[n-1] : max_rest;
 }
 
 int minValueInArray(int* arr, int n) {
-    if(n == 0 ) return arr[n];
-    int min = arr[n] < minValueInArray(arr, n-1) ? minValueInArray(arr, n-1) : arr[n];
-    return min;
+    if(n == 1 ) return arr[0];
+    int min_rest = minValueInArray(arr, n-1);
+    return arr[n-1] < min_rest ? arr[n-1] : min_rest;
 }
